@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup,FormBuilder,Validators } from '@angular/forms';
+import { AuthService } from '../service/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -7,10 +8,24 @@ import { FormControl, FormGroup,FormBuilder,Validators } from '@angular/forms';
 })
 export class RegisterPage implements OnInit {
   register: FormGroup;
-  constructor(public fb: FormBuilder) { 
+  register1 = {
+    Fname: '',
+    Lname: '',
+    email: '',
+    phone: 0,
+    address: '',
+    password : ''
+  }
+  constructor(public fb: FormBuilder,private auth : AuthService) { 
     
   }
-
+  run(){
+    console.log(this.register1);
+    this.signUp();
+  }
+  signUp(){
+    this.auth.signUp(this.register1.email,this.register1.password);
+}
   ngOnInit() {
     // this.register = this.fb.group({
     //   Fname: ['', Validators.compose([Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30), Validators.required])],

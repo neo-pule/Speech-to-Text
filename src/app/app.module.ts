@@ -7,6 +7,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
  //import { AngularFireModule } from '@angular/fire';
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
 // import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -22,6 +27,9 @@ const firebaseConfig = {
   messagingSenderId: "411027398515",
   appId: "1:411027398515:web:f902d3ee5df7d11e"
 };
+import * as firebase from 'firebase/app';
+
+firebase.initializeApp(environment.firebase);
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -29,6 +37,10 @@ const firebaseConfig = {
  FormsModule ,
 ReactiveFormsModule,
 CommonModule,
+provideFirebaseApp(() => initializeApp(firebaseConfig)),
+provideAuth(() => getAuth()),
+provideFirestore(() => getFirestore()),
+provideFunctions(() => getFunctions()),
       // 3. Initialize
       // AngularFireModule.initializeApp(firebaseConfig),
       // AngularFirestoreModule, // firestore

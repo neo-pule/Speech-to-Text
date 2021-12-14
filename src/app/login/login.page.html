@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true" class="body">
   <h3 class="header">Login </h3>
   <div class="main">
-    <ion-card>
+    <!-- <ion-card>
       <ion-item>
         <ion-label position="floating"> Email </ion-label>
         <ion-input placeholder="Enter Email"></ion-input>
@@ -9,12 +9,23 @@
 
       <ion-item class="ion-activated">
         <ion-label position="floating"> Password </ion-label>
-        <ion-input placeholder="Enter Password"></ion-input>
+        <ion-input placeholder="Enter Password" type="password"></ion-input>
       </ion-item>
     
-    </ion-card>
+    </ion-card> -->
     <br>
-    <ion-button expand="block" fill="outline" >Sign In</ion-button>
+    <form [formGroup]="login" >
+<ion-item>
+        <ion-label position="floating"> Email </ion-label>
+        <ion-input placeholder="Enter Email" [(ngModel)]="login1.email"></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-activated">
+        <ion-label position="floating"> Password </ion-label>
+        <ion-input placeholder="Enter Password" type="password" [(ngModel)]="login1.password" ></ion-input>
+      </ion-item>
+    </form>
+    <ion-button expand="block" fill="outline" (click)="run()">Sign In</ion-button>
     <p>Don't have an account, click <a [routerLink]="['/register']">here</a>.</p>
   </div>
 
