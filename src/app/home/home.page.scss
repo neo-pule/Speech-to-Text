@@ -4,13 +4,20 @@ ion-slides {
 }
 .body{
   // background: gray;
-  border-radius: 0 20% 0 0;
+  position: relative;
+  //border-radius: 0 20% 0 0;
   width: 100%;
 }
 .header{
-position: absolute;
-right: 0;
-padding: 2px 5px 2px 5px;
+  position: absolute;
+  //color: gray;
+  //border-radius: 0 0 0 20%;
+  background-color: gray;
+  // top: 8px;
+  right: 1rem;
+  z-index: 10;
+// right: 0;
+// padding: 2px 5px 2px 5px;
 }
 .slide-item{
   --background: url('../../assets/splash.gif') 0 0/100% 100% no-repeat;

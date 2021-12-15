@@ -28,10 +28,11 @@ const firebaseConfig = {
   appId: "1:411027398515:web:f902d3ee5df7d11e"
 };
 import * as firebase from 'firebase/app';
+import { TabsPage } from './tabs/tabs.page';
 
 firebase.initializeApp(environment.firebase);
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,TabsPage],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
  FormsModule ,

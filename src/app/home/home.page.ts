@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 interface Item {
@@ -13,7 +14,7 @@ interface Item {
 export class HomePage {
   
   item$: Observable<Item[]>;
-  constructor() {
+  constructor(private route: Router) {
     let obj;
     
     // const collections = collection(firestore, 'save');
@@ -23,5 +24,9 @@ export class HomePage {
     // console.log(obj)
      
   }
-
+  login()
+  {
+    console.log('***');
+    this.route.navigateByUrl('login');
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup,FormBuilder,Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
 @Component({
   selector: 'app-register',
@@ -16,7 +17,7 @@ export class RegisterPage implements OnInit {
     address: '',
     password : ''
   }
-  constructor(public fb: FormBuilder,private auth : AuthService) { 
+  constructor(public fb: FormBuilder,private auth : AuthService,private route : Router) { 
     
   }
   run(){
@@ -38,6 +39,9 @@ export class RegisterPage implements OnInit {
     // }, {
     //   //  validator: MustMatch('password', 'cpassword')
     // });
+  }
+  back(){
+    this.route.navigateByUrl('/login');
   }
 onSubmit(form: FormGroup) {
     console.log('Valid?', form.valid); // true or false
