@@ -12,7 +12,7 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content padding>
+<ion-content padding class="main">
   
   <!-- <ion-button (click)="photo1()">Next</ion-button>
 <ion-button (click)="photo()">Take photo</ion-button>
@@ -39,9 +39,7 @@
     <ion-col size="9" class="message other-msg" ><!-- *ngIf="tem.userID !== afAuth.auth.currentUser.uid" -->
         <!-- <h4><strong>{{tem.name}}</strong></h4>
         <p><strong>{{tem.userID}}</strong></p> -->
-        <h4><strong>tem.name</strong></h4>
-        <p><strong>tem.userID</strong></p>
-        <p>blah blah text ... </p>
+        
         <p>tem.message</p> <!-- <p>tem.message</p> -->
         <div class="time" text-right>
           <br>
@@ -52,9 +50,6 @@
       <ion-col offset="3" size="9" class="message my-msg" ><!-- *ngIf="tem.userID === afAuth.auth.currentUser.uid" -->
         <!-- <h4><strong>{{tem.name}}</strong></h4>
         <p><strong>{{tem.userID}}</strong></p> -->
-        <h4><strong>tem.name</strong></h4>
-        <p><strong>tem.userID</strong></p>
-        <p>tem.message</p> <!-- <p></p>{{tem.message}} -->
         <p>blah blah text ... </p>
         <div class="time" text-right>
           <br>
@@ -65,7 +60,7 @@
     </ion-row>
   </ion-grid>
 </ion-content>
-<ion-footer>
+<ion-footer style="position: fixed;bottom: 0; left: 0; right: 0; height: 90px">
   <ion-toolbar color="light">
     <ion-row>
         <ion-col size="2" >

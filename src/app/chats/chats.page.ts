@@ -11,7 +11,7 @@ export class ChatsPage implements OnInit {
   constructor(private route : Router) { }
 
   test(){
-    this.route.navigateByUrl('tabs/text');
+    this.route.navigateByUrl('text');
   }
   ngOnInit() {
   }

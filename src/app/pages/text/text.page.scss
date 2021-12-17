@@ -15,7 +15,7 @@ padding: 6px 10px 7px;
 border-radius: 15px 15px 15px 0px;
 background: rgb(117, 221, 108);
 font-size: medium;
-line-height: 1.4;
+//line-height: 1.4;
 
 
 }
@@ -58,4 +58,8 @@ ion-icon{
     position: absolute;
     bottom: 11px;
     align-content: center;
+}
+.main{
+    position: relative;
+    
 }
