@@ -1,7 +1,7 @@
-<ion-header>
-  <ion-toolbar >
-    <ion-title>
-      <ion-title>Chats</ion-title>
+<ion-header >
+  <ion-toolbar padding>
+    <ion-title >
+      <ion-title >Chats</ion-title>
       <ion-icon name="search-outline" ></ion-icon>
       
     </ion-title>
@@ -10,7 +10,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
+  <ion-list>
+  <ion-item (click)="test()">
     <ion-avatar slot="start">
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
@@ -41,4 +42,5 @@
     <ion-label>Item Avatar</ion-label>
     <ion-badge color="primary">2</ion-badge>
   </ion-item>
+</ion-list>
 </ion-content>

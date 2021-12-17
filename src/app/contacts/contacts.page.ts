@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contacts',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsPage implements OnInit {
 
-  constructor() { }
+  constructor(private route : Router) { }
 
+  test(){
+    this.route.navigateByUrl('tabs/text');
+  }
   ngOnInit() {
   }
 
