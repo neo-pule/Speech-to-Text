@@ -21,8 +21,9 @@ export class RegisterPage implements OnInit {
     
   }
   run(){
-    console.log(this.register1);
-    this.signUp();
+    // console.log(this.register1);
+    // this.signUp();
+    this.route.navigateByUrl('tabs/chats')
   }
   signUp(){
     this.auth.signUp(this.register1.email,this.register1.password);

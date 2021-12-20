@@ -1,0 +1,199 @@
+(self["webpackChunkionic_app_base"] = self["webpackChunkionic_app_base"] || []).push([["src_app_register_register_module_ts"],{
+
+/***/ 91654:
+/*!*****************************************************!*\
+  !*** ./src/app/register/register-routing.module.ts ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RegisterPageRoutingModule": function() { return /* binding */ RegisterPageRoutingModule; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 29535);
+/* harmony import */ var _register_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./register.page */ 52133);
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _register_page__WEBPACK_IMPORTED_MODULE_0__.RegisterPage
+    }
+];
+let RegisterPageRoutingModule = class RegisterPageRoutingModule {
+};
+RegisterPageRoutingModule = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.NgModule)({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule.forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule],
+    })
+], RegisterPageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ 22474:
+/*!*********************************************!*\
+  !*** ./src/app/register/register.module.ts ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RegisterPageModule": function() { return /* binding */ RegisterPageModule; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 16274);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 93324);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ 76820);
+/* harmony import */ var _register_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./register-routing.module */ 91654);
+/* harmony import */ var _register_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./register.page */ 52133);
+
+
+
+
+
+
+
+let RegisterPageModule = class RegisterPageModule {
+};
+RegisterPageModule = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.NgModule)({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__.CommonModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__.FormsModule,
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicModule,
+            _register_routing_module__WEBPACK_IMPORTED_MODULE_0__.RegisterPageRoutingModule
+        ],
+        declarations: [_register_page__WEBPACK_IMPORTED_MODULE_1__.RegisterPage]
+    })
+], RegisterPageModule);
+
+
+
+/***/ }),
+
+/***/ 52133:
+/*!*******************************************!*\
+  !*** ./src/app/register/register.page.ts ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RegisterPage": function() { return /* binding */ RegisterPage; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _raw_loader_register_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./register.page.html */ 29200);
+/* harmony import */ var _register_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./register.page.scss */ 69728);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ 93324);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 29535);
+/* harmony import */ var _service_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/auth.service */ 54972);
+
+
+
+
+
+
+
+let RegisterPage = class RegisterPage {
+    constructor(fb, auth, route) {
+        this.fb = fb;
+        this.auth = auth;
+        this.route = route;
+        this.register1 = {
+            Fname: '',
+            Lname: '',
+            email: '',
+            phone: 0,
+            address: '',
+            password: ''
+        };
+    }
+    run() {
+        // console.log(this.register1);
+        // this.signUp();
+        this.route.navigateByUrl('tabs/chats');
+    }
+    signUp() {
+        this.auth.signUp(this.register1.email, this.register1.password);
+    }
+    ngOnInit() {
+        // this.register = this.fb.group({
+        //   Fname: ['', Validators.compose([Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30), Validators.required])],
+        //   Lname: ['', Validators.compose([Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30), Validators.required])],
+        //   phone: ['', Validators.compose([Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30),Validators.required])],
+        //   address: ['', Validators.required],
+        //   email: ['', Validators.compose([Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'), Validators.required])],
+        //    password: ['', Validators.compose([Validators.minLength(6), Validators.maxLength(12), Validators.required])],
+        //    cpassword: ['', Validators.required],
+        // }, {
+        //   //  validator: MustMatch('password', 'cpassword')
+        // });
+    }
+    back() {
+        this.route.navigateByUrl('/login');
+    }
+    onSubmit(form) {
+        console.log('Valid?', form.valid); // true or false
+        console.log('Name', form.value.Fname);
+        console.log('Name', form.value.Lname);
+        console.log('Email', form.value.email);
+        console.log('Name', form.value.phone);
+        console.log('Name', form.value.address);
+        console.log('Name', form.value.password);
+    }
+};
+RegisterPage.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormBuilder },
+    { type: _service_auth_service__WEBPACK_IMPORTED_MODULE_2__.AuthService },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__.Router }
+];
+RegisterPage = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
+        selector: 'app-register',
+        template: _raw_loader_register_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        styles: [_register_page_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+    })
+], RegisterPage);
+
+
+
+/***/ }),
+
+/***/ 69728:
+/*!*********************************************!*\
+  !*** ./src/app/register/register.page.scss ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".main {\n  position: relative;\n  top: 5%;\n  padding: 0 10px 0 10px;\n}\n\n.header {\n  position: relative;\n  top: 15%;\n  text-align: center;\n}\n\n.body {\n  color: #497cda;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlZ2lzdGVyLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0EsT0FBQTtFQUNBLHNCQUFBO0FBQ0o7O0FBQ0U7RUFDRSxrQkFBQTtFQUNBLFFBQUE7RUFDQSxrQkFBQTtBQUVKOztBQUFFO0VBRUUsY0FBQTtBQUVKIiwiZmlsZSI6InJlZ2lzdGVyLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWlue1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB0b3A6IDUlO1xuICAgIHBhZGRpbmc6IDAgMTBweCAwIDEwcHg7XG4gIH1cbiAgLmhlYWRlcntcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgdG9wOiAxNSU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB9XG4gIC5ib2R5e1xuICAgIC8vIC0tYmFja2dyb3VuZDogdXJsKCcuLi8uLi9hc3NldHMvYmFjay1pbWcucG5nJykgMCAwLzEwMCUgMTAwJSBuby1yZXBlYXQ7XG4gICAgY29sb3I6IHJnYig3MywgMTI0LCAyMTgpO1xuICB9Il19 */");
+
+/***/ }),
+
+/***/ 29200:
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/register/register.page.html ***!
+  \***********************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar >\n    <ion-icon name=\"arrow-back-outline\" (click)=\"back()\"></ion-icon>\n    <ion-title>Register</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <!-- <h3 class=\"header\">Login </h3> -->\n  <div class=\"main\">\n    <ion-card>\n      <form [formGroup]=\"register\" >\n      <ion-item class=\"ion-activated\">\n        <ion-label position=\"floating\"> First Name </ion-label>\n        <ion-input [(ngModel)]=\"register1.Fname\" placeholder=\"Enter First Name\"></ion-input>\n      </ion-item>\n    \n      <ion-item >\n        <ion-label position=\"floating\"> Last Name </ion-label>\n        <ion-input [(ngModel)]=\"register1.Lname\" placeholder=\"Enter Last Name\"></ion-input>\n      </ion-item>\n    \n      <ion-item>\n        <ion-label position=\"floating\"> Email </ion-label>\n        <ion-input [(ngModel)]=\"register1.email\" placeholder=\"Enter Email\"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-label position=\"floating\"> Contact Number</ion-label>\n        <ion-input [(ngModel)]=\"register1.phone\" placeholder=\"Enter Contact Number\"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-label position=\"floating\"> Address </ion-label>\n        <ion-input [(ngModel)]=\"register1.address\" placeholder=\"Enter Address\"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-label position=\"floating\"> Password </ion-label>\n        <ion-input [(ngModel)]=\"register1.password\" placeholder=\"Enter Password\" type=\"password\"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-label position=\"floating\"> Confirm Password </ion-label>\n        <ion-input placeholder=\"Re-enter Password\" type=\"password\"></ion-input>\n      </ion-item>\n      </form>\n    </ion-card>\n    <br>\n    <ion-button expand=\"block\" fill=\"outline\" type=\"submit\" (click)=\"run()\">Sign Up</ion-button>\n    <p>Alreadyhave an account, click <a [routerLink]=\"['/login']\">here</a>.</p>\n  </div>\n\n</ion-content>\n");
+
+/***/ })
+
+}]);
+//# sourceMappingURL=src_app_register_register_module_ts-es2015.js.map

@@ -1,0 +1,155 @@
+(self["webpackChunkionic_app_base"] = self["webpackChunkionic_app_base"] || []).push([["src_app_chats_chats_module_ts"],{
+
+/***/ 54874:
+/*!***********************************************!*\
+  !*** ./src/app/chats/chats-routing.module.ts ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ChatsPageRoutingModule": function() { return /* binding */ ChatsPageRoutingModule; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 29535);
+/* harmony import */ var _chats_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chats.page */ 35608);
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _chats_page__WEBPACK_IMPORTED_MODULE_0__.ChatsPage
+    }
+];
+let ChatsPageRoutingModule = class ChatsPageRoutingModule {
+};
+ChatsPageRoutingModule = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.NgModule)({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule.forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule],
+    })
+], ChatsPageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ 23675:
+/*!***************************************!*\
+  !*** ./src/app/chats/chats.module.ts ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ChatsPageModule": function() { return /* binding */ ChatsPageModule; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 16274);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 93324);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ 76820);
+/* harmony import */ var _chats_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chats-routing.module */ 54874);
+/* harmony import */ var _chats_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chats.page */ 35608);
+
+
+
+
+
+
+
+let ChatsPageModule = class ChatsPageModule {
+};
+ChatsPageModule = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.NgModule)({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__.CommonModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__.FormsModule,
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicModule,
+            _chats_routing_module__WEBPACK_IMPORTED_MODULE_0__.ChatsPageRoutingModule
+        ],
+        declarations: [_chats_page__WEBPACK_IMPORTED_MODULE_1__.ChatsPage]
+    })
+], ChatsPageModule);
+
+
+
+/***/ }),
+
+/***/ 35608:
+/*!*************************************!*\
+  !*** ./src/app/chats/chats.page.ts ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ChatsPage": function() { return /* binding */ ChatsPage; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _raw_loader_chats_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./chats.page.html */ 23250);
+/* harmony import */ var _chats_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chats.page.scss */ 45759);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 29535);
+
+
+
+
+
+let ChatsPage = class ChatsPage {
+    constructor(route) {
+        this.route = route;
+    }
+    test() {
+        this.route.navigateByUrl('text');
+    }
+    ngOnInit() {
+    }
+};
+ChatsPage.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.Router }
+];
+ChatsPage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
+        selector: 'app-chats',
+        template: _raw_loader_chats_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        styles: [_chats_page_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+    })
+], ChatsPage);
+
+
+
+/***/ }),
+
+/***/ 45759:
+/*!***************************************!*\
+  !*** ./src/app/chats/chats.page.scss ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".time {\n  position: relative;\n  font-size: 10px;\n  top: 30px;\n}\n\n.badge {\n  position: absolute;\n  top: 12px;\n  right: 2px;\n}\n\n.container {\n  height: 100%;\n  position: relative;\n  left: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNoYXRzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLFNBQUE7QUFDQTs7QUFDQTtFQUNJLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUFFSjs7QUFBQTtFQUNJLFlBQUE7RUFDQSxrQkFBQTtFQUNBLE9BQUE7QUFHSiIsImZpbGUiOiJjaGF0cy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGltZXtcbnBvc2l0aW9uOiByZWxhdGl2ZTtcbmZvbnQtc2l6ZTogMTBweDtcbnRvcDozMHB4O1xufVxuLmJhZGdle1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IDEycHg7XG4gICAgcmlnaHQ6IDJweDtcbn1cbi5jb250YWluZXJ7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBsZWZ0OiAwO1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ 23250:
+/*!*****************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/chats/chats.page.html ***!
+  \*****************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header >\n  <ion-toolbar padding>\n    <ion-title >\n      <ion-title >Chats</ion-title>\n      <ion-icon name=\"search-outline\" ></ion-icon>\n      \n    </ion-title>\n    \n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n  <ion-item (click)=\"test()\">\n    <ion-avatar slot=\"start\">\n      <img src=\"https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y\">\n    </ion-avatar>\n    <ion-label>Item Avatar</ion-label>\n    <div class=\"container\"> \n    <ion-badge color=\"primary\" class=\"badge\">3</ion-badge>\n    <span class=\"time\">11:49</span>\n  </div>\n  </ion-item>\n  <ion-item>\n    <ion-avatar slot=\"start\">\n      <img src=\"https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y\">\n    </ion-avatar>\n    <ion-label>Item Avatar</ion-label>\n    <ion-badge color=\"primary\">11</ion-badge>\n  </ion-item>\n  <ion-item>\n    <ion-avatar slot=\"start\">\n      <img src=\"https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y\">\n    </ion-avatar>\n    <ion-label>Item Avatar</ion-label>\n    <ion-badge color=\"primary\">6</ion-badge>\n  </ion-item>\n  <ion-item>\n    <ion-avatar slot=\"start\">\n      <img src=\"https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y\">\n    </ion-avatar>\n    <ion-label>Item Avatar</ion-label>\n    <ion-badge color=\"primary\">2</ion-badge>\n  </ion-item>\n</ion-list>\n</ion-content>\n");
+
+/***/ })
+
+}]);
+//# sourceMappingURL=src_app_chats_chats_module_ts-es2015.js.map
