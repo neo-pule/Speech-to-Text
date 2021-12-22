@@ -13,6 +13,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { Camera } from '@awesome-cordova-plugins/camera/ngx';
+import { NativeAudio } from '@awesome-cordova-plugins/native-audio/ngx';
  //import { AngularFireModule } from '@angular/fire';
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
 // import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -49,7 +50,7 @@ provideFunctions(() => getFunctions()),
       // AngularFireAuthModule, // auth
       // AngularFireStorageModule ],// storage
     ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },Camera],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },Camera,NativeAudio],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

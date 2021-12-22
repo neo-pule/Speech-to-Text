@@ -92,19 +92,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TextPage": function() { return /* binding */ TextPage; }
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 61855);
 /* harmony import */ var _raw_loader_text_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./text.page.html */ 1199);
 /* harmony import */ var _text_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./text.page.scss */ 10500);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42741);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 29535);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ 76820);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 29535);
+/* harmony import */ var _awesome_cordova_plugins_native_audio_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @awesome-cordova-plugins/native-audio/ngx */ 74527);
+
+
 
 
 
 
 
 let TextPage = class TextPage {
-    constructor(route) {
+    constructor(route, nativeAudio, platform) {
         this.route = route;
+        this.nativeAudio = nativeAudio;
+        this.platform = platform;
+        // The Native Audio plugin can only be called once the platform is ready
+        this.platform.ready().then(() => {
+            console.log("platform ready");
+            // This is used to unload the track. It's useful if you're experimenting with track locations
+            this.nativeAudio.unload('trackID').then(function () {
+                console.log("unloaded audio!");
+            }, function (err) {
+                console.log("couldn't unload audio... " + err);
+            });
+            // 'trackID' can be anything
+            this.nativeAudio.preloadComplex('trackID', `assets/audio/2Pac - Baby don't cry.mp3`, 1, 1, 0).then(function () {
+                console.log("audio loaded!");
+            }, function (err) {
+                console.log("audio failed: " + err);
+            });
+        });
     }
     test() {
         console.log('***');
@@ -120,10 +142,12 @@ let TextPage = class TextPage {
     }
 };
 TextPage.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.Router }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__.Router },
+    { type: _awesome_cordova_plugins_native_audio_ngx__WEBPACK_IMPORTED_MODULE_2__.NativeAudio },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.Platform }
 ];
-TextPage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
+TextPage = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-text',
         template: _raw_loader_text_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_text_page_scss__WEBPACK_IMPORTED_MODULE_1__.default]

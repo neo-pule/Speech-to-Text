@@ -179,7 +179,7 @@
       /* harmony import */
 
 
-      var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! tslib */
       61855);
       /* harmony import */
@@ -197,21 +197,54 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/core */
       42741);
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @ionic/angular */
+      76820);
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/router */
       29535);
+      /* harmony import */
+
+
+      var _awesome_cordova_plugins_native_audio_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @awesome-cordova-plugins/native-audio/ngx */
+      74527);
 
       var _TextPage = /*#__PURE__*/function () {
-        function TextPage(route) {
+        function TextPage(route, nativeAudio, platform) {
+          var _this = this;
+
           _classCallCheck(this, TextPage);
 
           this.route = route;
+          this.nativeAudio = nativeAudio;
+          this.platform = platform; // The Native Audio plugin can only be called once the platform is ready
+
+          this.platform.ready().then(function () {
+            console.log("platform ready"); // This is used to unload the track. It's useful if you're experimenting with track locations
+
+            _this.nativeAudio.unload('trackID').then(function () {
+              console.log("unloaded audio!");
+            }, function (err) {
+              console.log("couldn't unload audio... " + err);
+            }); // 'trackID' can be anything
+
+
+            _this.nativeAudio.preloadComplex('trackID', "assets/audio/2Pac - Baby don't cry.mp3", 1, 1, 0).then(function () {
+              console.log("audio loaded!");
+            }, function (err) {
+              console.log("audio failed: " + err);
+            });
+          });
         }
 
         _createClass(TextPage, [{
@@ -240,11 +273,15 @@
 
       _TextPage.ctorParameters = function () {
         return [{
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.Router
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__.Router
+        }, {
+          type: _awesome_cordova_plugins_native_audio_ngx__WEBPACK_IMPORTED_MODULE_2__.NativeAudio
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.Platform
         }];
       };
 
-      _TextPage = (0, tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([(0, _angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
+      _TextPage = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([(0, _angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-text',
         template: _raw_loader_text_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_text_page_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]

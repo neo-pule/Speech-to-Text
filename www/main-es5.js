@@ -289,43 +289,43 @@
       /* harmony import */
 
 
-      var tslib__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var tslib__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! tslib */
       61855);
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! @angular/core */
       42741);
       /* harmony import */
 
 
-      var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/platform-browser */
       93220);
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! @angular/router */
       29535);
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/common */
       16274);
       /* harmony import */
 
 
-      var _ionic_angular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @ionic/angular */
       76820);
       /* harmony import */
 
 
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/forms */
       93324);
       /* harmony import */
@@ -343,7 +343,7 @@
       /* harmony import */
 
 
-      var _angular_fire_app__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _angular_fire_app__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/fire/app */
       94309);
       /* harmony import */
@@ -355,19 +355,19 @@
       /* harmony import */
 
 
-      var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! @angular/fire/auth */
       33469);
       /* harmony import */
 
 
-      var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! @angular/fire/firestore */
       18894);
       /* harmony import */
 
 
-      var _angular_fire_functions__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _angular_fire_functions__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! @angular/fire/functions */
       7649);
       /* harmony import */
@@ -379,13 +379,19 @@
       /* harmony import */
 
 
-      var firebase_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _awesome_cordova_plugins_native_audio_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @awesome-cordova-plugins/native-audio/ngx */
+      74527);
+      /* harmony import */
+
+
+      var firebase_app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! firebase/app */
       81665);
       /* harmony import */
 
 
-      var _tabs_tabs_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _tabs_tabs_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! ./tabs/tabs.page */
       43962); // import { FormsModule } from '@angular/forms';
       //import { AngularFireModule } from '@angular/fire';
@@ -404,23 +410,23 @@
         messagingSenderId: "411027398515",
         appId: "1:411027398515:web:f902d3ee5df7d11e"
       };
-      firebase_app__WEBPACK_IMPORTED_MODULE_4__.initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_2__.environment.firebase);
+      firebase_app__WEBPACK_IMPORTED_MODULE_5__.initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_2__.environment.firebase);
 
       var _AppModule = function AppModule() {
         _classCallCheck(this, AppModule);
       };
 
-      _AppModule = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__decorate)([(0, _angular_core__WEBPACK_IMPORTED_MODULE_7__.NgModule)({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent, _tabs_tabs_page__WEBPACK_IMPORTED_MODULE_5__.TabsPage],
+      _AppModule = (0, tslib__WEBPACK_IMPORTED_MODULE_7__.__decorate)([(0, _angular_core__WEBPACK_IMPORTED_MODULE_8__.NgModule)({
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent, _tabs_tabs_page__WEBPACK_IMPORTED_MODULE_6__.TabsPage],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_9__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.ReactiveFormsModule, _angular_common__WEBPACK_IMPORTED_MODULE_11__.CommonModule, (0, _angular_fire_app__WEBPACK_IMPORTED_MODULE_12__.provideFirebaseApp)(function () {
-          return (0, _angular_fire_app__WEBPACK_IMPORTED_MODULE_12__.initializeApp)(firebaseConfig);
-        }), (0, _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__.provideAuth)(function () {
-          return (0, _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__.getAuth)();
-        }), (0, _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_14__.provideFirestore)(function () {
-          return (0, _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_14__.getFirestore)();
-        }), (0, _angular_fire_functions__WEBPACK_IMPORTED_MODULE_15__.provideFunctions)(function () {
-          return (0, _angular_fire_functions__WEBPACK_IMPORTED_MODULE_15__.getFunctions)();
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_10__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule, _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_11__.ReactiveFormsModule, _angular_common__WEBPACK_IMPORTED_MODULE_12__.CommonModule, (0, _angular_fire_app__WEBPACK_IMPORTED_MODULE_13__.provideFirebaseApp)(function () {
+          return (0, _angular_fire_app__WEBPACK_IMPORTED_MODULE_13__.initializeApp)(firebaseConfig);
+        }), (0, _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__.provideAuth)(function () {
+          return (0, _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__.getAuth)();
+        }), (0, _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__.provideFirestore)(function () {
+          return (0, _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__.getFirestore)();
+        }), (0, _angular_fire_functions__WEBPACK_IMPORTED_MODULE_16__.provideFunctions)(function () {
+          return (0, _angular_fire_functions__WEBPACK_IMPORTED_MODULE_16__.getFunctions)();
         }) // 3. Initialize
         // AngularFireModule.initializeApp(firebaseConfig),
         // AngularFirestoreModule, // firestore
@@ -428,9 +434,9 @@
         // AngularFireStorageModule ],// storage
         ],
         providers: [{
-          provide: _angular_router__WEBPACK_IMPORTED_MODULE_16__.RouteReuseStrategy,
-          useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_9__.IonicRouteStrategy
-        }, _awesome_cordova_plugins_camera_ngx__WEBPACK_IMPORTED_MODULE_3__.Camera],
+          provide: _angular_router__WEBPACK_IMPORTED_MODULE_17__.RouteReuseStrategy,
+          useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_10__.IonicRouteStrategy
+        }, _awesome_cordova_plugins_camera_ngx__WEBPACK_IMPORTED_MODULE_3__.Camera, _awesome_cordova_plugins_native_audio_ngx__WEBPACK_IMPORTED_MODULE_4__.NativeAudio],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent]
       })], _AppModule);
       /***/
