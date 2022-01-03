@@ -222,8 +222,8 @@
         _createClass(LoginPage, [{
           key: "run",
           value: function run() {
-            console.log(this.login1);
-            this.signIn();
+            console.log(this.login1); // this.fb.
+            //  this.signIn();
           }
         }, {
           key: "signIn",
@@ -266,7 +266,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ".main {\n  position: relative;\n  top: 25%;\n  padding: 0 10px 0 10px;\n}\n\n.header {\n  position: relative;\n  top: 15%;\n  text-align: center;\n}\n\n.body {\n  color: #497cda;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvZ2luLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLHNCQUFBO0FBQ0o7O0FBQ0U7RUFDRSxrQkFBQTtFQUNBLFFBQUE7RUFDQSxrQkFBQTtBQUVKOztBQUFFO0VBRUUsY0FBQTtBQUVKIiwiZmlsZSI6ImxvZ2luLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWlue1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB0b3A6IDI1JTtcbiAgICBwYWRkaW5nOiAwIDEwcHggMCAxMHB4O1xuICB9XG4gIC5oZWFkZXJ7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHRvcDogMTUlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgfVxuICAuYm9keXtcbiAgICAvLyAtLWJhY2tncm91bmQ6IHVybCgnLi4vLi4vYXNzZXRzL2JhY2staW1nLnBuZycpIDAgMC8xMDAlIDEwMCUgbm8tcmVwZWF0O1xuICAgIGNvbG9yOiByZ2IoNzMsIDEyNCwgMjE4KTtcbiAgfSJdfQ== */";
+      __webpack_exports__["default"] = ".main {\n  position: relative;\n  top: 25%;\n  padding: 0 10px 0 10px;\n}\n\n.header {\n  position: relative;\n  top: 15%;\n  text-align: center;\n}\n\n.body {\n  color: #497cda;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvZ2luLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLHNCQUFBO0FBQ0o7O0FBQ0U7RUFDRSxrQkFBQTtFQUNBLFFBQUE7RUFDQSxrQkFBQTtBQUVKOztBQUFFO0VBRUUsY0FBQTtBQUVKIiwiZmlsZSI6ImxvZ2luLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWlue1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgdG9wOiAyNSU7XHJcbiAgICBwYWRkaW5nOiAwIDEwcHggMCAxMHB4O1xyXG4gIH1cclxuICAuaGVhZGVye1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgdG9wOiAxNSU7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgfVxyXG4gIC5ib2R5e1xyXG4gICAgLy8gLS1iYWNrZ3JvdW5kOiB1cmwoJy4uLy4uL2Fzc2V0cy9iYWNrLWltZy5wbmcnKSAwIDAvMTAwJSAxMDAlIG5vLXJlcGVhdDtcclxuICAgIGNvbG9yOiByZ2IoNzMsIDEyNCwgMjE4KTtcclxuICB9Il19 */";
       /***/
     },
 
@@ -284,7 +284,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-content [fullscreen]=\"true\" class=\"body\">\n  <h3 class=\"header\">Login </h3>\n  <div class=\"main\">\n    <!-- <ion-card>\n      <ion-item>\n        <ion-label position=\"floating\"> Email </ion-label>\n        <ion-input placeholder=\"Enter Email\"></ion-input>\n      </ion-item>\n\n      <ion-item class=\"ion-activated\">\n        <ion-label position=\"floating\"> Password </ion-label>\n        <ion-input placeholder=\"Enter Password\" type=\"password\"></ion-input>\n      </ion-item>\n    \n    </ion-card> -->\n    <br>\n    <form [formGroup]=\"login\" >\n<ion-item>\n        <ion-label position=\"floating\"> Email </ion-label>\n        <ion-input placeholder=\"Enter Email\" [(ngModel)]=\"login1.email\"></ion-input>\n      </ion-item>\n\n      <ion-item class=\"ion-activated\">\n        <ion-label position=\"floating\"> Password </ion-label>\n        <ion-input placeholder=\"Enter Password\" type=\"password\" [(ngModel)]=\"login1.password\" ></ion-input>\n      </ion-item>\n    </form>\n    <ion-button expand=\"block\" fill=\"outline\" (click)=\"run()\">Sign In</ion-button>\n    <p>Don't have an account, click <a [routerLink]=\"['/register']\">here</a>.</p>\n  </div>\n\n</ion-content>";
+      __webpack_exports__["default"] = "<ion-content [fullscreen]=\"true\" class=\"body\">\r\n  <h3 class=\"header\">Login </h3>\r\n  <div class=\"main\">\r\n    <!-- <ion-card>\r\n      <ion-item>\r\n        <ion-label position=\"floating\"> Email </ion-label>\r\n        <ion-input placeholder=\"Enter Email\"></ion-input>\r\n      </ion-item>\r\n\r\n      <ion-item class=\"ion-activated\">\r\n        <ion-label position=\"floating\"> Password </ion-label>\r\n        <ion-input placeholder=\"Enter Password\" type=\"password\"></ion-input>\r\n      </ion-item>\r\n    \r\n    </ion-card> [(ngModel)]=\"login1.password\" -->\r\n    <br>\r\n    <form formGroup=\"login\" >\r\n<ion-item>\r\n        <ion-label position=\"floating\"> Email </ion-label>\r\n        <ion-input placeholder=\"Enter Email\" ></ion-input>\r\n      </ion-item>\r\n\r\n      <ion-item class=\"ion-activated\">\r\n        <ion-label position=\"floating\"> Password </ion-label>\r\n        <ion-input placeholder=\"Enter Password\" type=\"password\"  ></ion-input>\r\n      </ion-item>\r\n    </form>\r\n    <ion-button expand=\"block\" fill=\"outline\" (click)=\"run()\">Sign In</ion-button>\r\n    <p>Don't have an account, click <a [routerLink]=\"['/register']\">here</a>.</p>\r\n  </div>\r\n\r\n</ion-content>";
       /***/
     }
   }]);

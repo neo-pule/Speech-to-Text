@@ -1,8 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    
-    <ion-title>text</ion-title>
-    <ion-icon name="arrow-back-outline" (click)="test()"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>User Name</ion-title>
+
   </ion-toolbar>
   
 </ion-header>
@@ -53,25 +55,49 @@
         <!-- <h4><strong>{{tem.name}}</strong></h4>
         <p><strong>{{tem.userID}}</strong></p> -->
         <p>blah blah text ... </p>
+        <p>{{msg}} </p>
         <div class="time" text-right>
           <br>
           <!-- {{tem.time | date : 'short'}} -->time | date : 'short'
         </div>
       </ion-col>
-
+    <ion-list> 
+      <div class="audioCard" *ngFor="let f of storedFileNames">
+        <ion-label class="audioLabel" >
+          {{f}}
+        </ion-label>
+        <ion-progress-bar value="0.81" buffer="0.9"color="secondary" style="position: relative; width: 50%;top: 40px;left: 15px;" ></ion-progress-bar>
+        <ion-icon name="play-circle-outline"  *ngIf="!playing" (click)="play(f)"></ion-icon> 
+        <ion-icon name="pause-circle-outline" *ngIf="playing"></ion-icon>
+       </div>
+       </ion-list>   
     </ion-row>
   </ion-grid>
+  <!-- <ion-button (click)="startRecording()"> Start</ion-button>
+  <ion-button (click)="stopRecording()"> Stop</ion-button>
+  <ion-list>
+    <ion-item button *ngFor="let f of storedFileNames" (click)="play(f)">
+      {{ f }}
+    </ion-item>
+  </ion-list> -->
+
+
 </ion-content>
 <ion-footer style="position: fixed;bottom: 0; left: 0; right: 0; height: 90px">
   <ion-toolbar color="light">
     <ion-row>
         <ion-col size="2" >
-            <ion-icon name="happy" (click)="sendEmj()"></ion-icon>
+          <span *ngIf="recording">
+            {{durationTime}}
+          </span>
+            <ion-icon name="mic" #recordbtn></ion-icon>
+        
+           
           </ion-col>
         
       <ion-col size="8">
        
-        <ion-textarea autosize maxRows="3"  >
+        <ion-textarea autosize maxRows="2" [(ngModel)]="msg"  style="border: 1pt solid;border-radius: 8px 8px 8px 8px;height: 60x;">
 
         </ion-textarea>
       </ion-col>

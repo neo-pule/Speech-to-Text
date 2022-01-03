@@ -32,6 +32,12 @@ this.camera.getPicture(options).then((imageData) => {
  console.log('err');
 });
   }
+  uploadProfilePic($event){
+
+  }
+  upload($event){
+    
+  }
   test(){
     console.log('***')
     this.route.navigateByUrl('tabs/profile');

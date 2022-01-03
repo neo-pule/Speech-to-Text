@@ -12,20 +12,21 @@
         <ion-input placeholder="Enter Password" type="password"></ion-input>
       </ion-item>
     
-    </ion-card> -->
+    </ion-card> [(ngModel)]="login1.password" -->
     <br>
-    <form [formGroup]="login" >
+    <form [formGroup]="myForm" class="form" (ngSubmit)="onSubmit()">
 <ion-item>
         <ion-label position="floating"> Email </ion-label>
-        <ion-input placeholder="Enter Email" [(ngModel)]="login1.email"></ion-input>
+        <ion-input placeholder="Enter Email" formControlName="email"></ion-input>
       </ion-item>
 
       <ion-item class="ion-activated">
         <ion-label position="floating"> Password </ion-label>
-        <ion-input placeholder="Enter Password" type="password" [(ngModel)]="login1.password" ></ion-input>
+        <ion-input placeholder="Enter Password" type="password" formControlName="password"  ></ion-input>
       </ion-item>
+      <button type="submit">Submit</button>
     </form>
-    <ion-button expand="block" fill="outline" (click)="run()">Sign In</ion-button>
+    <!-- <ion-button expand="block" fill="outline"  type="submit">Sign In</ion-button> -->
     <p>Don't have an account, click <a [routerLink]="['/register']">here</a>.</p>
   </div>
 

@@ -16,7 +16,7 @@ border-radius: 15px 15px 15px 0px;
 background: rgb(117, 221, 108);
 font-size: medium;
 //line-height: 1.4;
-
+//--background: url('../../../assets/audio/Tshela.mp3') 0 0/100% 100% no-repeat;
 
 }
 .my-msg{
@@ -62,4 +62,16 @@ ion-icon{
 .main{
     position: relative;
     
+}
+.audioCard{
+    position: relative;
+    height: 80px;width: 220px;
+    background-color: cornflowerblue;
+    margin: 15px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+.audioLabel{
+    position: relative;
+    top: 35px;
+    padding: 5px 5px 5px 20px;
 }

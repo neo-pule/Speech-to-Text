@@ -19,18 +19,21 @@ ion-slides {
 // right: 0;
 // padding: 2px 5px 2px 5px;
 }
-.slide-item{
+.slide-item{  
   --background: url('../../assets/splash.gif') 0 0/100% 100% no-repeat;
   height: 100%;
-  width: 190%;
+  width: 100%;
+  margin: 0 0 0 0;
 }
 .slide-item1{
   --background: url('../../assets/splash1.gif') 0 0/100% 100% no-repeat;
   height: 100%;
-  width: 190%;
+  width: 100%;
+  margin: 0 0 0 0;
 }
 .slide-item2{
   --background: url('../../assets/sign-back.png') 0 0/100% 100% no-repeat;
   height: 100%;
-  width: 190%;
+  width: 100%;
+  margin: 0 0 0 0;
 }

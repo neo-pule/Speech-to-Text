@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import {CommonModule } from '@angular/common';
+//import {CommonModule } from '@angular/common';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-// import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+ import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -39,7 +39,7 @@ firebase.initializeApp(environment.firebase);
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
  FormsModule ,
 ReactiveFormsModule,
-CommonModule,
+//CommonModule,
 provideFirebaseApp(() => initializeApp(firebaseConfig)),
 provideAuth(() => getAuth()),
 provideFirestore(() => getFirestore()),

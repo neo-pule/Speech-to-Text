@@ -1,7 +1,11 @@
 .main{
     position: relative;
-    top: 25%;
+    top: 20%;
     padding: 0 10px 0 10px;
+    width: 80%;
+    left: 10%;
+    height: 40%;
+   
   }
   .header{
     position: relative;
@@ -11,4 +15,11 @@
   .body{
     // --background: url('../../assets/back-img.png') 0 0/100% 100% no-repeat;
     color: rgb(73, 124, 218);
+  }
+  .form{
+    margin-bottom: 10%;
+  }
+  ion-item{
+    position: relative;
+    margin-bottom: 1%;
   }

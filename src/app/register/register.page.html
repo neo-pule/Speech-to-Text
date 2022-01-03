@@ -1,6 +1,8 @@
 <ion-header>
   <ion-toolbar >
-    <ion-icon name="arrow-back-outline" (click)="back()"></ion-icon>
+        <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
     <ion-title>Register</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -48,7 +50,7 @@
     </ion-card>
     <br>
     <ion-button expand="block" fill="outline" type="submit" (click)="run()">Sign Up</ion-button>
-    <p>Alreadyhave an account, click <a [routerLink]="['/login']">here</a>.</p>
+    <!-- <p>Alreadyhave an account, click <a [routerLink]="['/login']">here</a>.</p> -->
   </div>
 
 </ion-content>

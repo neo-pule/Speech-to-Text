@@ -10,11 +10,13 @@ android {
 apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
     implementation project(':capacitor-app')
+    implementation project(':capacitor-filesystem')
     implementation project(':capacitor-haptics')
     implementation project(':capacitor-keyboard')
     implementation project(':capacitor-screen-reader')
     implementation project(':capacitor-status-bar')
-    implementation "androidx.core:core:1.6.+"
+    implementation project(':capacitor-voice-recorder')
+
 }
 
 
